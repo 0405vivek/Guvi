@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complete HTML Form Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        mark {
+            background-color: #ffd54f;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        ul {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="color"],
+        input[type="file"],
+        input[type="range"],
+        input[type="time"],
+        input[type="search"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        table input,
+        table select {
+            width: 100%;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1><mark>HTML & CSS is awesome</mark></h1>
+
+       
+        <hr>
+
+        <h2> Q.3 Contact Us</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label>Employee Type:</label>
+            <input type="radio" id="salaried" name="employeeType" value="salaried" required>
+            <label for="salaried">Salaried</label>
+            <input type="radio" id="business" name="employeeType" value="business">
+            <label for="business">Own Business</label>
+
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2> Q.4 Programming Languages</h2>
+        <ul>
+            <li>JavaScript
+                <ul>
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>Vue.js</li>
+                </ul>
+
+            </li>
+            <li>Python
+                <ul>
+                    <li>Django Framework</li>
+                    <li>Flask Framework</li>
+                </ul>
+            </li>
+            <li>Java
+                <ul>
+                    <li>Spring</li>
+                    <li>Maven</li>
+                    <li>Hibernate</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Databases</h2>
+        <ul>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>Cassandra</li>
+        </ul>
+
+         
+        <p> Q.5
+            <a href="https://google.com" target="_blank">Open Google in New Tab</a>
+        </p>
+
+
+
+        <hr>
+
+        <h2>Credit Card Form</h2>
+        <table border="1">
+            <tr>
+                <td>Card Type:</td>
+                <td>
+                    <input type="radio" name="cardType"> Visa
+                    <input type="radio" name="cardType"> MasterCard
+                    <input type="radio" name="cardType"> American Express
+                </td>
+            </tr>
+            <tr>
+                <td>Card Number:</td>
+                <td><input type="text" value="1234 5678 9012 3456"></td>
+            </tr>
+            <tr>
+                <td>Expiration Date:</td>
+                <td>
+                    <select>
+                        <option selected>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                    </select> /
+                    <select>
+                        <option selected>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Cardholder Name:</td>
+                <td><input type="text" value="John Doe"></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>All Input Types with Default Values</h2>
+        <form>
+            <label>Text:</label>
+            <input type="text" value="Default Text">
+
+            <label>Password:</label>
+            <input type="password" value="password">
+
+            <label>Email:</label>
+            <input type="email" value="test@example.com">
+
+            <label>Number:</label>
+            <input type="number" value="42">
+
+            <label>Date:</label>
+            <input type="date" value="2025-08-06">
+
+            <label>Checkbox:</label>
+            <input type="checkbox" checked> Subscribe
+
+            <label>Radio:</label>
+            <input type="radio" name="gender" checked> Male
+            <input type="radio" name="gender"> Female
+
+            <label>Color:</label>
+            <input type="color" value="#ff0000">
+
+            <label>File:</label>
+            <input type="file">
+
+            <label>Range:</label>
+            <input type="range" value="70">
+
+            <label>Time:</label>
+            <input type="time" value="10:30">
+
+            <label>Search:</label>
+            <input type="search" value="Search Query">
+
+            <label>Tel:</label>
+            <input type="tel" value="1234567890">
+
+            <label>URL:</label>
+            <input type="url" value="https://example.com">
+
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
